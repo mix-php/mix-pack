@@ -24,7 +24,7 @@ return [
     // 命令
     'commands'         => [
 
-        'hi' => ['Hello', 'description' => "Hello world."],
+        'project' => ['Project', 'description' => "Compile a project as a PHAR file. "],
 
     ],
 
