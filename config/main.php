@@ -28,9 +28,9 @@ return [
             'description' => "Compile a project as a PHAR file. ",
             'options'     => [
                 '--basedir'   => 'The project directory to be compiled.',
-                '--output'    => 'Output phar file name.',
-                '--bootstrap' => 'Boot entry file path.',
-                '--regex'     => 'Regular expression of the compiled file.',
+                '--output'    => 'The name of the output phar file.',
+                '--bootstrap' => 'The path to the Bootstrap file.',
+                '--regex'     => 'Extract the regular expression of the file.',
             ],
         ],
 
