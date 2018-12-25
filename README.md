@@ -2,6 +2,12 @@
 
 这是一个使用 MIX 开发的系统命令，可以用来将 [mixstart/mix-cli](https://github.com/mixstart/mix-cli) 开发的项目编译为 Phar 文件，当然也可以用来编译其他的任何项目，比如将某个库打包为 Phar。
 
+## 安装
+
+直接下载最新的 `mix-compile.phar` 文件即可。
+
+[mix-compile/releases](https://github.com/mixstart/mix-compile/releases)
+
 ## Use examples
 
 查看帮助
