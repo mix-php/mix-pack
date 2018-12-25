@@ -4,19 +4,19 @@
 return [
 
     // 应用名称
-    'appName'          => 'mix-console',
+    'appName'          => 'mix-compile',
 
     // 应用版本
-    'appVersion'       => '0.0.0',
+    'appVersion'       => '1.0.0',
 
     // 应用调试
-    'appDebug'         => true,
+    'appDebug'         => false,
 
     // 初始化回调
     'initialize'       => [],
 
     // 基础路径
-    'basePath'         => WORK_DIR,
+    'basePath'         => substr(dirname(dirname(__DIR__)), 7),
 
     // 命令命名空间
     'commandNamespace' => 'Cli\Commands',
@@ -24,7 +24,15 @@ return [
     // 命令
     'commands'         => [
 
-        'project' => ['Project', 'description' => "Compile a project as a PHAR file. "],
+        'project' => ['Project',
+            'description' => "Compile a project as a PHAR file. ",
+            'options'     => [
+                '--basedir'   => 'The project directory to be compiled.',
+                '--output'    => 'Output phar file name.',
+                '--bootstrap' => 'Boot entry file path.',
+                '--regex'     => 'Regular expression of the compiled file.',
+            ],
+        ],
 
     ],
 
@@ -37,25 +45,6 @@ return [
             'class' => 'Mix\Console\Error',
             // 错误级别
             'level' => E_ALL,
-        ],
-
-        // 日志
-        'log'   => [
-            // 类路径
-            'class'   => 'Mix\Log\Logger',
-            // 日志记录级别
-            'levels'  => ['emergency', 'alert', 'critical', 'error', 'warning', 'notice', 'info', 'debug'],
-            // 处理者
-            'handler' => [
-                // 类路径
-                'class'       => 'Mix\Log\FileHandler',
-                // 日志目录
-                'dir'         => WORK_DIR . DIRECTORY_SEPARATOR . 'logs',
-                // 日志轮转类型
-                'rotate'      => Mix\Log\FileHandler::ROTATE_DAY,
-                // 最大文件尺寸
-                'maxFileSize' => 0,
-            ],
         ],
 
     ],

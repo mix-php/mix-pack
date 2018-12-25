@@ -23,11 +23,11 @@ class ProjectCommand extends Command
         $bootstrap = Flag::string('bootstrap', '');
         $regex     = Flag::string('regex', '');
         if (empty($basedir)) {
-            println('\'--basedir\' parameter cannot be empty.');
+            println('\'--basedir\' option cannot be empty.');
             return;
         }
         if (empty($output)) {
-            println('\'--output\' parameter cannot be empty.');
+            println('\'--output\' option cannot be empty.');
             return;
         }
         // 打包
