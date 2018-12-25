@@ -16,7 +16,10 @@ return [
     'initialize'       => [],
 
     // 基础路径
-    'basePath'         => substr(dirname(dirname(__DIR__)), 7),
+    'basePath'         => str_replace('phar://', '', dirname(dirname(__DIR__))),
+
+    // 运行目录路径
+    'runtimePath'      => '',
 
     // 命令命名空间
     'commandNamespace' => 'Cli\Commands',
