@@ -1,6 +1,6 @@
 ## mix-compile
 
-这是一个使用 MIX 开发的系统命令，可以用来将 [mixstart/mix-cli](https://github.com/mixstart/mix-cli) 开发的项目编译为 Phar 文件（可以理解为 Golang 编译为执行文件一样），当然也可以用来编译其他的任何项目，比如将某个库打包为 Phar，供其他人 include 使用。
+这是一个使用 MIX 开发的系统命令，可以用来将 [mix-php/mix-cli](https://github.com/mix-php/mix-cli) 开发的项目编译为 Phar 文件（可以理解为 Golang 编译为执行文件一样），当然也可以用来编译其他的任何项目，比如将某个库打包为 Phar，供其他人 include 使用。
 
 ## 安装
 
