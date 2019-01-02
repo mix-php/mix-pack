@@ -1,5 +1,5 @@
 {
-  "name": "mixstart/mixcli",
+  "name": "mix/cli",
   "description": "MixPHP 系统命令开发 http://www.mixphp.cn",
   "type": "project",
   "keywords": [
@@ -17,12 +17,12 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "mixstart/mix-framework": "dev-master",
-    "mixstart/mix-console": "dev-master",
-    "mixstart/mix-log": "dev-master",
-    "mixstart/mix-concurrent": "dev-master",
-    "mixstart/mix-database": "dev-master",
-    "mixstart/mix-redis": "dev-master"
+    "mix/framework": "dev-master",
+    "mix/console": "dev-master",
+    "mix/log": "dev-master",
+    "mix/concurrent": "dev-master",
+    "mix/database": "dev-master",
+    "mix/redis": "dev-master"
   },
   "autoload": {
     "psr-4": {
