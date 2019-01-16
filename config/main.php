@@ -7,7 +7,7 @@ return [
     'appName'          => 'mix-compile',
 
     // 应用版本
-    'appVersion'       => '1.0.0',
+    'appVersion'       => '1.0.1',
 
     // 应用调试
     'appDebug'         => false,
@@ -16,7 +16,7 @@ return [
     'initialize'       => [],
 
     // 基础路径
-    'basePath'         => str_replace('phar://', '', dirname(dirname(__DIR__))),
+    'basePath'         => str_replace(['phar://', '/'], ['', DIRECTORY_SEPARATOR], dirname(dirname(__DIR__))),
 
     // 运行目录路径
     'runtimePath'      => '',
@@ -44,16 +44,24 @@ return [
 
         // 错误
         'error' => [
-            // 类路径
-            'class' => 'Mix\Console\Error',
-            // 错误级别
-            'level' => E_ALL,
+            // 依赖引用
+            'ref' => beanname(Mix\Console\Error::class),
         ],
 
     ],
 
-    // 类库配置
-    'libraries'        => [
+    // 依赖配置
+    'beans'            => [
+
+        [
+            // 类路径
+            'class'      => Mix\Console\Error::class,
+            // 属性
+            'properties' => [
+                // 错误级别
+                'level' => E_ALL,
+            ],
+        ],
 
     ],
 

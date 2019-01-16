@@ -32,10 +32,11 @@ class ProjectCommand extends Command
         }
         // 打包
         $phar = new \Phar($output);
+        $phar->startBuffering();
         $phar->buildFromDirectory($basedir, $regex);
         $phar->compressFiles(\Phar::GZ);
+        $phar->setStub('#!/usr/bin/env php' . PHP_EOL . $phar->createDefaultStub(str_replace('\\', '/', $bootstrap)));
         $phar->stopBuffering();
-        $phar->setStub($phar->createDefaultStub($bootstrap));
         // 完成
         println("Compile successfully, file path: {$output}");
     }
