@@ -47,8 +47,8 @@ Developed with MixPHP framework.
 打包 `mix-cli` 项目为 Phar 文件
 
 ```shell
-C:\works\projects>php mix-compile.phar project --basedir=C:\works\projects\mix-cli --output=C:\works\projects\mix-cli.phar --bootstrap=bin\mix-cli.php
-Compile successfully, file path: C:\works\projects\mix-cli.phar
+C:\works\projects>php mix-compile.phar project --basedir=C:\works\projects\app --output=C:\works\projects\app.phar --bootstrap=bin\bootstrap.php
+Compile successfully, file path: C:\works\projects\app.phar
 ``` 
 
 ## License
