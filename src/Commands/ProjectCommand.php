@@ -34,7 +34,6 @@ class ProjectCommand extends Command
         $phar = new \Phar($output);
         $phar->startBuffering();
         $phar->buildFromDirectory($basedir, $regex);
-        $phar->compressFiles(\Phar::GZ);
         $phar->setStub('#!/usr/bin/env php' . "\n" . $phar->createDefaultStub(str_replace('\\', '/', $bootstrap)));
         $phar->stopBuffering();
         // 完成
