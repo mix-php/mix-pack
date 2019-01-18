@@ -54,7 +54,10 @@ Compile successfully, file path: C:\works\projects\app.phar
 执行编译好的应用：
 
 ```
+// windows
 C:\works\projects>php app.phar
+// linux
+$> ./app.phar
 ```
 
 ## License
