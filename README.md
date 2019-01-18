@@ -12,7 +12,7 @@
 
 查看帮助
 
-```shell
+```
 C:\works\projects>php mix-compile.phar
 Usage: mix-compile.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
 
@@ -31,7 +31,7 @@ Developed with MixPHP framework.
 
 查看 `project` 命令的帮助
 
-```shell
+```
 C:\works\projects>php mix-compile.phar project --help
 Usage: mix-compile.phar project [arg...]
 
@@ -46,10 +46,16 @@ Developed with MixPHP framework.
 
 打包 `mix-cli` 项目为 Phar 文件
 
-```shell
+```
 C:\works\projects>php mix-compile.phar project --basedir=C:\works\projects\app --output=C:\works\projects\app.phar --bootstrap=bin\bootstrap.php
 Compile successfully, file path: C:\works\projects\app.phar
 ``` 
+
+执行编译好的应用：
+
+```
+C:\works\projects>php app.phar
+```
 
 ## License
 
