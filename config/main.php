@@ -12,9 +12,6 @@ return [
     // 应用调试
     'appDebug'         => false,
 
-    // 初始化回调
-    'initialize'       => [],
-
     // 基础路径
     'basePath'         => str_replace(['phar://', '/'], ['', DIRECTORY_SEPARATOR], dirname(dirname(__DIR__))),
 
