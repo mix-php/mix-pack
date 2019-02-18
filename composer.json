@@ -18,8 +18,7 @@
   "require": {
     "php": ">=7.0.0",
     "mix/framework": "dev-master",
-    "mix/console": "dev-master",
-    "mix/log": "dev-master"
+    "mix/console": "dev-master"
   },
   "autoload": {
     "psr-4": {
