@@ -2,11 +2,9 @@
 
 这是一个使用 MIX 开发的系统命令，可以用来将 [mix-php/mix-cli](https://github.com/mix-php/mix-cli) 开发的项目编译为 Phar 文件（可以理解为 Golang 编译为执行文件一样），当然也可以用来编译其他的任何项目，比如将某个库打包为 Phar，供其他人 include 使用。
 
-## 安装
+## 下载
 
-直接下载最新的 `mix-compile.phar` 文件即可。
-
-[mix-compile/releases](https://github.com/mixstart/mix-compile/releases)
+- [mix-compile v2.0.1](https://github.com/mix-php/mix-compile/releases/download/v2.0.1/mix-compile.phar)
 
 ## Use examples
 
