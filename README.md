@@ -1,55 +1,55 @@
-## mix-compile
+## Mix Pack
 
-这是一个使用 MIX 开发的系统命令，可以用来将 [mix-php/mix-cli](https://github.com/mix-php/mix-cli) 开发的项目编译为 Phar 文件（可以理解为 Golang 编译为执行文件一样），当然也可以用来编译其他的任何项目，比如将某个库打包为 Phar，供其他人 include 使用。
+这是一个使用 MIX 开发的系统命令，可以用来将 [mix-php/mix-phar](https://github.com/mix-php/mix-phar) 开发的项目打包为 Phar 文件（可以理解为 Golang 编译为执行文件一样），当然也可以用来打包其他的任何 PHP 项目，比如将某个库打包为 Phar，供其他人 include 使用。
 
 ## 下载
 
-- [mix-compile v2.0.1](https://github.com/mix-php/mix-compile/releases/download/v2.0.1/mix-compile.phar)
+- [mix-pack v1.0.1](https://github.com/mix-php/mix-pack/releases/download/v1.0.1/mix-pack.phar)
 
 ## Use examples
 
-查看帮助
+查看帮助 `php mix-pack.phar`
 
 ```
-C:\works\projects>php mix-compile.phar
-Usage: mix-compile.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
+C:\works\projects>php mix-pack.phar
+Usage: mix-pack.phar [OPTIONS] COMMAND [SUBCOMMAND] [arg...]
 
 Options:
-  -h/--help     Print usage.
-  -v/--version  Print version information.
+  -h, --help    Print usage.
+  -v, --version Print version information.
 
 Commands:
-  project       Compile a project as a PHAR file.
+  build         Package the project as a PHAR file.
 
-Run 'mix-compile.phar COMMAND [SUBCOMMAND] --help' for more information on a command.
+Run 'mix-pack.phar COMMAND [SUBCOMMAND] --help' for more information on a command.
 
-Developed with MixPHP framework.
-
+Developed with Mix PHP framework. (mixphp.cn)
 ```
 
-查看 `project` 命令的帮助
+查看 `build` 命令的帮助 `php mix-pack.phar build -h`
 
 ```
-C:\works\projects>php mix-compile.phar project --help
-Usage: mix-compile.phar project [arg...]
+C:\works\projects>php mix-pack.phar build -h
+Usage: mix-pack.phar build [arg...]
 
 Options:
-  --basedir     The project directory to be compiled.
-  --output      The name of the output phar file.
-  --bootstrap   The path to the Bootstrap file.
-  --regex       Extract the regular expression of the file.
+  -d, --dir             The project directory to be packaged
+  -o, --output          The name of the output phar file
+  -b, --bootstrap       The path to the Bootstrap file
+  -r, --regex           Extract regular expressions
 
-Developed with MixPHP framework.
+Developed with Mix PHP framework. (mixphp.cn)
 ```
 
-打包 `mix-cli` 项目为 Phar 文件
+打包 PHP 项目为 Phar 文件
 
 ```
-C:\works\projects>php -d phar.readonly=0 mix-compile.phar project --basedir=C:\works\projects\app --output=C:\works\projects\app.phar --bootstrap=bin\bootstrap.php
-Compile successfully, file path: C:\works\projects\app.phar
+C:\works\projects>php mix-pack.phar build -d C:\works\projects\app -o C:\works\projects\app.phar -b bin\bootstrap.php
+Build successfully!
+ - Phar file: C:\works\projects\app.phar
 ``` 
 
-执行编译好的应用：
+执行打包好的应用 (Phar)：
 
 ```
 // windows
