@@ -1,6 +1,6 @@
 {
-  "name": "mix/cli",
-  "description": "MixPHP 系统命令开发 http://www.mixphp.cn",
+  "name": "mix/mix-phar",
+  "description": "MixPHP 命令行程序开发 (Phar单执行文件) http://www.mixphp.cn",
   "type": "project",
   "keywords": [
     "framework",
@@ -11,18 +11,21 @@
   "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Jian Liu",
-      "email": "coder.liu@qq.com"
+      "name": "liu,jian",
+      "email": "coder.keda@gmail.com"
     }
   ],
   "require": {
     "php": ">=7.0.0",
-    "mix/framework": "dev-master",
-    "mix/console": "dev-master"
+    "ext-mbstring": "*",
+    "mix/framework": "~2.0.0",
+    "mix/console": "~2.0.0",
+    "mix/log": "~2.0.0",
+    "mix/validate": "~2.0.0"
   },
   "autoload": {
     "psr-4": {
-      "Cli\\": "src/"
+      "Phar\\": "src/"
     },
     "classmap": [
       "src/ApplicationInterface.php"
@@ -30,5 +33,11 @@
     "files": [
       "src/functions.php"
     ]
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.laravel-china.org"
+    }
   }
 }
