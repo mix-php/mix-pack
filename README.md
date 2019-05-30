@@ -44,7 +44,7 @@ Developed with Mix PHP framework. (mixphp.cn)
 打包 PHP 项目为 Phar 文件
 
 ```
-C:\works\projects>php mix-pack.phar build -d C:\works\projects\app -o C:\works\projects\app.phar -b bin\bootstrap.php
+C:\works\projects>php -d phar.readonly=0 mix-pack.phar build -d C:\works\projects\app -o C:\works\projects\app.phar -b bin\bootstrap.php
 Build successfully!
  - Phar file: C:\works\projects\app.phar
 ``` 
