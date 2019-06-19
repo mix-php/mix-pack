@@ -20,7 +20,7 @@ class BuildCommand
     {
         // phar.readonly检查
         if (ini_get('phar.readonly')) {
-            println("please use 'php -d phar.readonly=0 mix-pack.phar build opt...'");
+            println("Please use 'php -d phar.readonly=0 mix-pack.phar build opt...'");
             exit;
         }
         // 获取参数
