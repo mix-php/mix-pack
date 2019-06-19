@@ -34,6 +34,8 @@ Build successfully!
 
 - windows
 
+指定 php 执行
+
 ```
 C:\project>php app.phar
 ```
@@ -93,9 +95,9 @@ php mix-pack.phar build -o /data/app.phar
 
 ## 引导文件
 
-设置 Phar 文件执行时，引入的第一个文件，**只能是相对路径**
+设置 Phar 文件执行时，引入的入口文件，**只能是相对路径**
 
-> 这是一个非必须参数
+> 非必须参数
 
 ```
 php mix-pack.phar build --bootstrap=bin/bootstrap.php
@@ -111,7 +113,7 @@ php mix-pack.phar build -b bin/bootstrap.php
 
 设置打包时提取文件的正则表达式，用于过滤掉一些不需要的文件
 
-> 这是一个非必须参数
+> 非必须参数
 
 ```
 php mix-pack.phar build --regex="/\.php$/"
