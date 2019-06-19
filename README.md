@@ -30,7 +30,7 @@ Build successfully!
  - Phar file: /data/app.phar
 ```
 
-## 执行打包好的应用 (Phar)
+## 执行打包文件 (Phar)
 
 - windows
 
