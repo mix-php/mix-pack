@@ -18,6 +18,11 @@ class BuildCommand
      */
     public function main()
     {
+        // phar.readonly检查
+        if (ini_get('phar.readonly')) {
+            println("please use 'php -d phar.readonly=0 mix-pack.phar build opt...'");
+            exit;
+        }
         // 获取参数
         $argv = [
             'dir'       => Flag::string(['d', 'dir'], ''),
@@ -31,7 +36,7 @@ class BuildCommand
         $model->setScenario('main');
         if (!$model->validate()) {
             println($model->getError());
-            return;
+            exit;
         }
         // 打包
         $phar = new \Phar($model->output);
